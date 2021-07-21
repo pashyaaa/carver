@@ -1,0 +1,11 @@
+<mat-nav-list [ngClass]="{ 'collapsed': toggle == false}">
+    <a mat-list-item *ngFor="let p of pages" [href]="p.url" [ngClass]="{ 'selected': selectedPath == p.title , 
+    'collapsed': toggle == false}">
+        <mat-icon class="material-icons-outlined" [ngClass]="{ 'selected': selectedPath == p.title}">{{p.icon}}</mat-icon>
+        <span *ngIf="toggle" class="menu-label">{{p.title}}</span>
+    </a>
+</mat-nav-list>
+<button mat-mini-fab (click)="onToggle()" [ngClass]="{ 'collapsed': toggle == false}">
+    <mat-icon *ngIf="toggle">navigate_before</mat-icon>
+    <mat-icon *ngIf="!toggle">navigate_next</mat-icon>
+</button>

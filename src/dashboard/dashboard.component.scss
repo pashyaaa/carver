@@ -1,0 +1,33 @@
+.sidenav-container {
+    height: 100%;
+    background-color: #F3F2F0;
+  }
+  
+  .sidenav {
+    width: 245px;
+    background-color: #F3F2F0;
+    border: none;
+  }
+  
+  .sidenav .mat-toolbar {
+    background: inherit;
+  }
+  
+  .mat-toolbar.mat-primary {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+
+  .mat-sidenav:not(.mat-drawer-opened) {
+    transform: translate3d(0, 0, 0) !important;
+    visibility: visible !important;
+    width: 65px !important;
+  }
+
+  .mat-sidenav-content {
+    margin-left: 265px;
+    &.collapsed{
+      margin-left: 65px;
+    }
+  }
